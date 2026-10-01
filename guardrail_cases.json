@@ -1,0 +1,39 @@
+{
+  "version": "1.1",
+  "purpose": "Separate safety, validation, and reliability tests. These are not part of the main 40-case quality comparison.",
+  "cases": [
+    {"id":"guard_01","type":"structured","description":"Negative kills","input":{"hero":"后羿","role":"Marksman","kills":-1,"deaths":2,"assists":3,"gold":10000,"gold_share_pct":20,"damage_dealt":50000,"damage_dealt_share_pct":25,"damage_taken":20000,"damage_taken_share_pct":10,"kill_participation_pct":40,"duration_min":20,"match_result":"win"},"expected":"full"},
+    {"id":"guard_02","type":"structured","description":"Damage share above 100 percent","input":{"hero":"后羿","role":"Marksman","kills":1,"deaths":2,"assists":3,"gold":10000,"gold_share_pct":20,"damage_dealt":50000,"damage_dealt_share_pct":110,"damage_taken":20000,"damage_taken_share_pct":10,"kill_participation_pct":40,"duration_min":20,"match_result":"win"},"expected":"full"},
+    {"id":"guard_03","type":"structured","description":"Missing damage only","input":{"hero":"后羿","role":"Marksman","kills":5,"deaths":2,"assists":6,"gold":11000,"gold_share_pct":22,"damage_dealt":null,"damage_dealt_share_pct":null,"damage_taken":20000,"damage_taken_share_pct":10,"kill_participation_pct":50,"duration_min":20,"match_result":"win"},"expected":"partial"},
+    {"id":"guard_04","type":"structured","description":"No performance statistics","input":{"hero":"后羿","role":"Marksman","kills":null,"deaths":null,"assists":null,"gold":null,"gold_share_pct":null,"damage_dealt":null,"damage_dealt_share_pct":null,"damage_taken":null,"damage_taken_share_pct":null,"kill_participation_pct":null,"duration_min":null,"match_result":null},"expected":"full"},
+    {"id":"guard_05","type":"structured","description":"Unsupported role","input":{"hero":"后羿","role":"Goalkeeper","kills":5,"deaths":2,"assists":6,"gold":11000,"gold_share_pct":22,"damage_dealt":60000,"damage_dealt_share_pct":28,"damage_taken":20000,"damage_taken_share_pct":10,"kill_participation_pct":50,"duration_min":20,"match_result":"win"},"expected":"full"},
+    {"id":"guard_06","type":"structured","description":"Conflict status","input":{"hero":"孙悟空","role":"Assassin","kills":null,"deaths":4,"assists":3,"gold":12100,"gold_share_pct":23,"damage_dealt":57000,"damage_dealt_share_pct":22,"damage_taken":39000,"damage_taken_share_pct":15,"kill_participation_pct":null,"duration_min":21,"match_result":"win","validation_status":"conflict"},"expected":"full"},
+    {"id":"guard_07","type":"api","description":"OpenRouter timeout","expected":"show_error_without_fake_result"},
+    {"id":"guard_08","type":"output","description":"Model returns malformed JSON","expected":"reject_output"},
+    {"id":"guard_09","type":"output","description":"Model omits one required review section","expected":"reject_output"},
+    {
+      "id":"guard_10",
+      "type":"semantic",
+      "description":"Below-threshold damage taken is incorrectly treated as a weakness",
+      "input":{"hero":"后羿","role":"Marksman","kills":6,"deaths":4,"assists":8,"gold_share_pct":25,"damage_dealt_share_pct":35,"damage_taken_share_pct":11,"kill_participation_pct":55,"match_result":"win"},
+      "review":{"abstention_level":"none","what_went_well":["输出占比较高。"],"what_to_improve":["承伤占比11%，需注意生存。"],"next_match_focus":["减少受到的伤害。"],"evidence_used":["承伤占比11%"]},
+      "expected":"reject_output"
+    },
+    {
+      "id":"guard_11",
+      "type":"semantic",
+      "description":"Support is incorrectly told to raise gold and damage share",
+      "input":{"hero":"蔡文姬","role":"Support","kills":0,"deaths":3,"assists":19,"gold_share_pct":15,"damage_dealt_share_pct":5,"damage_taken_share_pct":14,"kill_participation_pct":73,"match_result":"loss"},
+      "review":{"abstention_level":"none","what_went_well":["参团率较高。"],"what_to_improve":["经济占比和输出占比较低。"],"next_match_focus":["提高经济占比并增加输出。"],"evidence_used":["参团率73%"]},
+      "expected":"reject_output"
+    },
+    {
+      "id":"guard_12",
+      "type":"semantic",
+      "description":"Partial abstention fails to name and request the missing field",
+      "input":{"hero":"李白","role":"Assassin","kills":8,"deaths":2,"assists":5,"gold_share_pct":null,"damage_dealt_share_pct":22,"damage_taken_share_pct":13,"kill_participation_pct":62,"match_result":"win"},
+      "review":{"abstention_level":"partial","what_went_well":["死亡较少，输出占比符合角色标准。"],"what_to_improve":["现有数据没有明显问题。"],"next_match_focus":["保持安全输出。"],"evidence_used":["死亡2次","输出占比22%"]},
+      "expected":"reject_output"
+    }
+  ]
+}

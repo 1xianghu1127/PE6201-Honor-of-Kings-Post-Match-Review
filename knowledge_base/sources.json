@@ -1,0 +1,42 @@
+{
+  "sources": [
+    {
+      "source_id": "official-hok-home",
+      "title": "Honor of Kings official website",
+      "url": "https://www.honorofkings.com/",
+      "publisher": "Honor of Kings",
+      "accessed_on": "2026-09-29",
+      "used_for": ["5v5 team context", "official role categories", "map objectives", "selected hero-role mappings"]
+    },
+    {
+      "source_id": "official-hok-guides",
+      "title": "Honor of Kings official game guides",
+      "url": "https://www.honorofkings.com/tutorial.html",
+      "publisher": "Honor of Kings",
+      "accessed_on": "2026-09-29",
+      "used_for": ["official guide entry point"]
+    },
+    {
+      "source_id": "project-role-framework",
+      "title": "Project-authored role interpretation framework",
+      "publisher": "Project team",
+      "accessed_on": "2026-09-29",
+      "used_for": ["role-specific interpretation of available post-match statistics"],
+      "note": "Written after the 40 cases and labels were completed. It contains general rules, not case answers."
+    },
+    {
+      "source_id": "project-evidence-policy",
+      "title": "Project-authored evidence and abstention policy",
+      "publisher": "Project team",
+      "accessed_on": "2026-09-29",
+      "used_for": ["limits on inference", "partial and full abstention behavior"]
+    },
+    {
+      "source_id": "project-evaluation-mapping",
+      "title": "Project-approved localized hero alias mapping",
+      "publisher": "Project team",
+      "accessed_on": "2026-09-29",
+      "used_for": ["Chinese and English hero-name matching"]
+    }
+  ]
+}

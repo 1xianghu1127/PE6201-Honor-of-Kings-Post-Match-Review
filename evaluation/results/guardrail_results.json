@@ -1,0 +1,87 @@
+{
+  "automatic_passed": 9,
+  "automatic_total": 9,
+  "manual_or_integration_total": 3,
+  "results": [
+    {
+      "id": "guard_01",
+      "expected": "full",
+      "actual": "full",
+      "passed": true
+    },
+    {
+      "id": "guard_02",
+      "expected": "full",
+      "actual": "full",
+      "passed": true
+    },
+    {
+      "id": "guard_03",
+      "expected": "partial",
+      "actual": "partial",
+      "passed": true
+    },
+    {
+      "id": "guard_04",
+      "expected": "full",
+      "actual": "full",
+      "passed": true
+    },
+    {
+      "id": "guard_05",
+      "expected": "full",
+      "actual": "full",
+      "passed": true
+    },
+    {
+      "id": "guard_06",
+      "expected": "full",
+      "actual": "full",
+      "passed": true
+    },
+    {
+      "id": "guard_07",
+      "status": "manual_or_integration_test",
+      "passed": null
+    },
+    {
+      "id": "guard_08",
+      "status": "manual_or_integration_test",
+      "passed": null
+    },
+    {
+      "id": "guard_09",
+      "status": "manual_or_integration_test",
+      "passed": null
+    },
+    {
+      "id": "guard_10",
+      "expected": "reject_output",
+      "actual": "reject_output",
+      "passed": true,
+      "detected_issues": [
+        "The review treats 11% damage-taken share as a weakness even though it is below the declared 22% high threshold."
+      ]
+    },
+    {
+      "id": "guard_11",
+      "expected": "reject_output",
+      "actual": "reject_output",
+      "passed": true,
+      "detected_issues": [
+        "The review treats 15% gold share as a weakness although the project only classifies it as not high; this is not a low-gold rule.",
+        "The review treats damage output as a required improvement for Support, which is not supported by the role rules."
+      ]
+    },
+    {
+      "id": "guard_12",
+      "expected": "reject_output",
+      "actual": "reject_output",
+      "passed": true,
+      "detected_issues": [
+        "Partial abstention does not explicitly decline the missing gold share dimension.",
+        "Partial abstention does not ask the user to provide the missing gold share field in next_match_focus."
+      ]
+    }
+  ]
+}

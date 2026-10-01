@@ -1,0 +1,16 @@
+.env
+.venv/
+.idea/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.streamlit/secrets.toml
+
+# Keep only the final evaluation evidence in version control.
+evaluation/results/*
+!evaluation/results/.gitkeep
+!evaluation/results/baseline_outputs.json
+!evaluation/results/baseline_human_scoring.csv
+!evaluation/results/rag_outputs.json
+!evaluation/results/rag_human_scoring.csv
+!evaluation/results/guardrail_results.json

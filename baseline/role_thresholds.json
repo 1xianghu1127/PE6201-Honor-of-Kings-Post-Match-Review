@@ -1,0 +1,40 @@
+{
+  "global": {
+    "high_deaths": 7,
+    "low_kill_participation_pct": 35,
+    "high_kill_participation_pct": 65
+  },
+  "Marksman": {
+    "good_damage_share_pct": 28,
+    "low_damage_share_pct": 18,
+    "high_damage_taken_share_pct": 22,
+    "high_gold_share_pct": 25
+  },
+  "Mage": {
+    "good_damage_share_pct": 25,
+    "low_damage_share_pct": 16,
+    "high_damage_taken_share_pct": 20,
+    "high_gold_share_pct": 25
+  },
+  "Assassin": {
+    "good_damage_share_pct": 22,
+    "low_damage_share_pct": 15,
+    "high_damage_taken_share_pct": 22,
+    "high_gold_share_pct": 25
+  },
+  "Fighter": {
+    "good_damage_share_pct": 22,
+    "good_damage_taken_share_pct": 22,
+    "high_gold_share_pct": 25
+  },
+  "Tank": {
+    "good_damage_taken_share_pct": 28,
+    "high_damage_taken_share_pct": 36,
+    "good_kill_participation_pct": 60
+  },
+  "Support": {
+    "good_kill_participation_pct": 65,
+    "high_damage_taken_share_pct": 24,
+    "high_deaths": 7
+  }
+}

@@ -1,0 +1,2554 @@
+{
+  "system": "rule_baseline",
+  "run_at": "2026-10-01T08:10:04.080854+00:00",
+  "dataset_version": "1.0",
+  "case_count": 40,
+  "results": [
+    {
+      "case_id": "case_01",
+      "input": {
+        "hero": "后羿",
+        "role": "Marksman",
+        "duration_min": 20,
+        "kills": 9,
+        "deaths": 2,
+        "assists": 7,
+        "gold": 13200,
+        "gold_share_pct": 25.4,
+        "damage_dealt": 82000,
+        "damage_dealt_share_pct": 34.2,
+        "damage_taken": 24000,
+        "damage_taken_share_pct": 11.4,
+        "kill_participation_pct": 57,
+        "match_result": "win",
+        "validation_status": "valid"
+      },
+      "expected": {
+        "expected_strengths": [
+          "KDA表现优秀且死亡较少",
+          "输出占比较高",
+          "经济有效转化为输出"
+        ],
+        "expected_weaknesses": [
+          "现有数据中没有明显严重弱点",
+          "无法评价走位、推塔和技能细节"
+        ],
+        "expected_next_actions": [
+          "继续稳定发育和安全输出",
+          "避免为追击承担不必要风险"
+        ],
+        "abstention_level": "none",
+        "abstain_on": [],
+        "required_user_action": null
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "none",
+        "what_went_well": [
+          "死亡次数较少（2次），生存表现较好。",
+          "输出占比为34.2%，完成了较好的伤害贡献。",
+          "输出占比明显高于经济占比，输出效率较好。"
+        ],
+        "what_to_improve": [
+          "现有数据中没有达到规则阈值的明显问题。"
+        ],
+        "next_match_focus": [
+          "下一局继续保持当前表现，并优先保证稳定参与和生存。"
+        ],
+        "evidence": [
+          "deaths",
+          "damage_dealt_share_pct",
+          "gold_share_pct"
+        ],
+        "latency_seconds": 0.0002710998523980379,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_02",
+      "input": {
+        "hero": "后羿",
+        "role": "Marksman",
+        "duration_min": 20,
+        "kills": 2,
+        "deaths": 8,
+        "assists": 3,
+        "gold": 9100,
+        "gold_share_pct": 17.8,
+        "damage_dealt": 31000,
+        "damage_dealt_share_pct": 14.1,
+        "damage_taken": 43000,
+        "damage_taken_share_pct": 21.0,
+        "kill_participation_pct": 25,
+        "match_result": "loss",
+        "validation_status": "valid"
+      },
+      "expected": {
+        "expected_strengths": [
+          "参与了部分击杀，但没有明显突出优势"
+        ],
+        "expected_weaknesses": [
+          "死亡和承伤占比较高",
+          "经济、输出占比和参团率偏低"
+        ],
+        "expected_next_actions": [
+          "优先保证发育",
+          "在前排队友后方输出",
+          "减少高风险交战"
+        ],
+        "abstention_level": "none",
+        "abstain_on": [],
+        "required_user_action": null
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "none",
+        "what_went_well": [
+          "现有数据中没有达到规则阈值的明显优势。"
+        ],
+        "what_to_improve": [
+          "死亡次数较多（8次），可能减少持续贡献时间。",
+          "参团率只有25%，团队参与偏低。",
+          "输出占比只有14.1%，与角色的伤害职责不匹配。"
+        ],
+        "next_match_focus": [
+          "下一局优先减少无队友支援时的高风险交战。",
+          "下一局在保证发育的同时，更及时地参与有队友配合的团战。",
+          "下一局在安全位置寻找更多有效输出机会。"
+        ],
+        "evidence": [
+          "deaths",
+          "kill_participation_pct",
+          "damage_dealt_share_pct"
+        ],
+        "latency_seconds": 0.00022620009258389473,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_03",
+      "input": {
+        "hero": "廉颇",
+        "role": "Tank",
+        "duration_min": 20,
+        "kills": 1,
+        "deaths": 4,
+        "assists": 17,
+        "gold": 9700,
+        "gold_share_pct": 18.2,
+        "damage_dealt": 28000,
+        "damage_dealt_share_pct": 10.5,
+        "damage_taken": 105000,
+        "damage_taken_share_pct": 36.8,
+        "kill_participation_pct": 69,
+        "match_result": "win",
+        "validation_status": "valid"
+      },
+      "expected": {
+        "expected_strengths": [
+          "承伤占比和参团率较高",
+          "高承伤下死亡次数仍可接受",
+          "低击杀不等于低贡献"
+        ],
+        "expected_weaknesses": [
+          "无法仅凭承伤量确认所有承伤均有效"
+        ],
+        "expected_next_actions": [
+          "继续承担前排职责",
+          "开团或承伤前确认队友能够跟进"
+        ],
+        "abstention_level": "none",
+        "abstain_on": [],
+        "required_user_action": null
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "none",
+        "what_went_well": [
+          "参团率为69%，团队参与较好。",
+          "承伤占比为36.8%，且死亡次数未明显失控。"
+        ],
+        "what_to_improve": [
+          "现有数据中没有达到规则阈值的明显问题。"
+        ],
+        "next_match_focus": [
+          "下一局继续保持当前表现，并优先保证稳定参与和生存。"
+        ],
+        "evidence": [
+          "kill_participation_pct",
+          "damage_taken_share_pct",
+          "deaths"
+        ],
+        "latency_seconds": 0.00017339992336928844,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_04",
+      "input": {
+        "hero": "蔡文姬",
+        "role": "Support",
+        "duration_min": 20,
+        "kills": 0,
+        "deaths": 3,
+        "assists": 19,
+        "gold": 8600,
+        "gold_share_pct": 15.3,
+        "damage_dealt": 13000,
+        "damage_dealt_share_pct": 5.4,
+        "damage_taken": 36000,
+        "damage_taken_share_pct": 14.1,
+        "kill_participation_pct": 73,
+        "match_result": "loss",
+        "validation_status": "valid"
+      },
+      "expected": {
+        "expected_strengths": [
+          "参团率较高",
+          "助攻较多且死亡较少",
+          "低输出符合辅助角色特点"
+        ],
+        "expected_weaknesses": [
+          "缺少治疗量和技能数据，无法评价具体治疗效果",
+          "不能将失利直接归因于该玩家"
+        ],
+        "expected_next_actions": [
+          "继续保持团队参与和生存",
+          "优先跟随并保护主要输出队友"
+        ],
+        "abstention_level": "none",
+        "abstain_on": [],
+        "required_user_action": null
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "none",
+        "what_went_well": [
+          "死亡次数较少（3次），生存表现较好。",
+          "参团率为73%，团队参与较好。",
+          "获得19次助攻，支援参与较好。"
+        ],
+        "what_to_improve": [
+          "现有数据中没有达到规则阈值的明显问题。"
+        ],
+        "next_match_focus": [
+          "下一局继续保持当前表现，并优先保证稳定参与和生存。"
+        ],
+        "evidence": [
+          "deaths",
+          "kill_participation_pct",
+          "assists"
+        ],
+        "latency_seconds": 0.00015380000695586205,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_05",
+      "input": {
+        "hero": "公孙离",
+        "role": "Marksman",
+        "duration_min": 24,
+        "kills": 10,
+        "deaths": 2,
+        "assists": 6,
+        "gold": 15200,
+        "gold_share_pct": 26.1,
+        "damage_dealt": 105000,
+        "damage_dealt_share_pct": 36.0,
+        "damage_taken": 29000,
+        "damage_taken_share_pct": 10.2,
+        "kill_participation_pct": 64,
+        "match_result": "loss",
+        "validation_status": "valid"
+      },
+      "expected": {
+        "expected_strengths": [
+          "输出占比高",
+          "KDA优秀且死亡控制良好"
+        ],
+        "expected_weaknesses": [
+          "无法仅凭比赛失利确定个人弱点或失败原因"
+        ],
+        "expected_next_actions": [
+          "保持当前生存和输出",
+          "团战取得优势后与队友共同争夺地图资源"
+        ],
+        "abstention_level": "none",
+        "abstain_on": [],
+        "required_user_action": null
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "none",
+        "what_went_well": [
+          "死亡次数较少（2次），生存表现较好。",
+          "输出占比为36.0%，完成了较好的伤害贡献。",
+          "输出占比明显高于经济占比，输出效率较好。"
+        ],
+        "what_to_improve": [
+          "现有数据中没有达到规则阈值的明显问题。"
+        ],
+        "next_match_focus": [
+          "下一局继续保持当前表现，并优先保证稳定参与和生存。"
+        ],
+        "evidence": [
+          "deaths",
+          "damage_dealt_share_pct",
+          "gold_share_pct"
+        ],
+        "latency_seconds": 0.00011979998089373112,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_06",
+      "input": {
+        "hero": "亚瑟",
+        "role": "Fighter",
+        "duration_min": 22,
+        "kills": 2,
+        "deaths": 9,
+        "assists": 4,
+        "gold": 10400,
+        "gold_share_pct": 18.5,
+        "damage_dealt": 36000,
+        "damage_dealt_share_pct": 14.0,
+        "damage_taken": 68000,
+        "damage_taken_share_pct": 24.0,
+        "kill_participation_pct": 22,
+        "match_result": "win",
+        "validation_status": "valid"
+      },
+      "expected": {
+        "expected_strengths": [
+          "团队最终获胜，但胜利本身不等于个人表现优秀"
+        ],
+        "expected_weaknesses": [
+          "死亡较多",
+          "输出占比和参团率较低"
+        ],
+        "expected_next_actions": [
+          "减少无队友支援时的交战",
+          "优先保证生存并提高团队参与"
+        ],
+        "abstention_level": "none",
+        "abstain_on": [],
+        "required_user_action": null
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "none",
+        "what_went_well": [
+          "现有数据中没有达到规则阈值的明显优势。"
+        ],
+        "what_to_improve": [
+          "死亡次数较多（9次），可能减少持续贡献时间。",
+          "参团率只有22%，团队参与偏低。"
+        ],
+        "next_match_focus": [
+          "下一局优先减少无队友支援时的高风险交战。",
+          "下一局在保证发育的同时，更及时地参与有队友配合的团战。"
+        ],
+        "evidence": [
+          "deaths",
+          "kill_participation_pct"
+        ],
+        "latency_seconds": 0.00011920020915567875,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_07",
+      "input": {
+        "hero": "妲己",
+        "role": "Mage",
+        "duration_min": 23,
+        "kills": 4,
+        "deaths": 5,
+        "assists": 7,
+        "gold": 14800,
+        "gold_share_pct": 27.2,
+        "damage_dealt": 38000,
+        "damage_dealt_share_pct": 14.0,
+        "damage_taken": 30000,
+        "damage_taken_share_pct": 12.0,
+        "kill_participation_pct": 35,
+        "match_result": "loss",
+        "validation_status": "valid"
+      },
+      "expected": {
+        "expected_strengths": [
+          "经济积累较高"
+        ],
+        "expected_weaknesses": [
+          "输出占比和参团率相对于经济占比较低",
+          "经济转化效率有限"
+        ],
+        "expected_next_actions": [
+          "在安全位置寻找更多有效输出机会",
+          "提高团队战斗参与度"
+        ],
+        "abstention_level": "none",
+        "abstain_on": [],
+        "required_user_action": null
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "none",
+        "what_went_well": [
+          "现有数据中没有达到规则阈值的明显优势。"
+        ],
+        "what_to_improve": [
+          "输出占比只有14.0%，与角色的伤害职责不匹配。",
+          "经济占比较高，但输出占比没有同步提升。"
+        ],
+        "next_match_focus": [
+          "下一局在安全位置寻找更多有效输出机会。",
+          "下一局重点提高经济到有效战斗贡献的转化。"
+        ],
+        "evidence": [
+          "damage_dealt_share_pct",
+          "gold_share_pct"
+        ],
+        "latency_seconds": 0.00015230011194944382,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_08",
+      "input": {
+        "hero": "兰陵王",
+        "role": "Assassin",
+        "duration_min": 25,
+        "kills": 13,
+        "deaths": 10,
+        "assists": 3,
+        "gold": 15300,
+        "gold_share_pct": 25.0,
+        "damage_dealt": 70000,
+        "damage_dealt_share_pct": 23.0,
+        "damage_taken": 59000,
+        "damage_taken_share_pct": 20.0,
+        "kill_participation_pct": 50,
+        "match_result": "loss",
+        "validation_status": "valid"
+      },
+      "expected": {
+        "expected_strengths": [
+          "击杀能力突出",
+          "贡献了一定输出"
+        ],
+        "expected_weaknesses": [
+          "死亡和承伤占比较高",
+          "部分击杀价值可能被频繁阵亡抵消"
+        ],
+        "expected_next_actions": [
+          "完成爆发后优先撤离",
+          "减少低收益追击和交换"
+        ],
+        "abstention_level": "none",
+        "abstain_on": [],
+        "required_user_action": null
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "none",
+        "what_went_well": [
+          "输出占比为23.0%，完成了较好的伤害贡献。"
+        ],
+        "what_to_improve": [
+          "死亡次数较多（10次），可能减少持续贡献时间。"
+        ],
+        "next_match_focus": [
+          "下一局优先减少无队友支援时的高风险交战。"
+        ],
+        "evidence": [
+          "deaths",
+          "damage_dealt_share_pct"
+        ],
+        "latency_seconds": 0.00015529990196228027,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_09",
+      "input": {
+        "hero": "安琪拉",
+        "role": "Mage",
+        "duration_min": 28,
+        "kills": 9,
+        "deaths": 9,
+        "assists": 8,
+        "gold": 16500,
+        "gold_share_pct": 24.8,
+        "damage_dealt": 128000,
+        "damage_dealt_share_pct": 35.0,
+        "damage_taken": 62000,
+        "damage_taken_share_pct": 18.0,
+        "kill_participation_pct": 53,
+        "match_result": "loss",
+        "validation_status": "valid"
+      },
+      "expected": {
+        "expected_strengths": [
+          "输出占比较高",
+          "参与了较多击杀"
+        ],
+        "expected_weaknesses": [
+          "死亡次数和承伤占比偏高",
+          "频繁阵亡影响持续输出时间"
+        ],
+        "expected_next_actions": [
+          "保持施法距离",
+          "在队友能够保护时进入输出位置"
+        ],
+        "abstention_level": "none",
+        "abstain_on": [],
+        "required_user_action": null
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "none",
+        "what_went_well": [
+          "输出占比为35.0%，完成了较好的伤害贡献。",
+          "输出占比明显高于经济占比，输出效率较好。"
+        ],
+        "what_to_improve": [
+          "死亡次数较多（9次），可能减少持续贡献时间。"
+        ],
+        "next_match_focus": [
+          "下一局优先减少无队友支援时的高风险交战。"
+        ],
+        "evidence": [
+          "deaths",
+          "damage_dealt_share_pct",
+          "gold_share_pct"
+        ],
+        "latency_seconds": 0.0001756001729518175,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_10",
+      "input": {
+        "hero": "瑶",
+        "role": "Support",
+        "duration_min": 19,
+        "kills": 1,
+        "deaths": 3,
+        "assists": 21,
+        "gold": 8200,
+        "gold_share_pct": 14.6,
+        "damage_dealt": 11000,
+        "damage_dealt_share_pct": 4.0,
+        "damage_taken": 30000,
+        "damage_taken_share_pct": 13.0,
+        "kill_participation_pct": 76,
+        "match_result": "win",
+        "validation_status": "valid"
+      },
+      "expected": {
+        "expected_strengths": [
+          "参团率高",
+          "助攻多且死亡较少"
+        ],
+        "expected_weaknesses": [
+          "缺少护盾和技能数据，无法全面评价保护效果"
+        ],
+        "expected_next_actions": [
+          "继续跟随核心队友",
+          "根据团战情况调整保护对象"
+        ],
+        "abstention_level": "none",
+        "abstain_on": [],
+        "required_user_action": null
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "none",
+        "what_went_well": [
+          "死亡次数较少（3次），生存表现较好。",
+          "参团率为76%，团队参与较好。",
+          "获得21次助攻，支援参与较好。"
+        ],
+        "what_to_improve": [
+          "现有数据中没有达到规则阈值的明显问题。"
+        ],
+        "next_match_focus": [
+          "下一局继续保持当前表现，并优先保证稳定参与和生存。"
+        ],
+        "evidence": [
+          "deaths",
+          "kill_participation_pct",
+          "assists"
+        ],
+        "latency_seconds": 0.00014609983190894127,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_11",
+      "input": {
+        "hero": "白起",
+        "role": "Tank",
+        "duration_min": 26,
+        "kills": 2,
+        "deaths": 10,
+        "assists": 13,
+        "gold": 12000,
+        "gold_share_pct": 18.0,
+        "damage_dealt": 31000,
+        "damage_dealt_share_pct": 9.0,
+        "damage_taken": 145000,
+        "damage_taken_share_pct": 39.0,
+        "kill_participation_pct": 60,
+        "match_result": "loss",
+        "validation_status": "valid"
+      },
+      "expected": {
+        "expected_strengths": [
+          "承伤占比和参团率较高"
+        ],
+        "expected_weaknesses": [
+          "死亡次数过高",
+          "高承伤中可能包含无效承伤"
+        ],
+        "expected_next_actions": [
+          "发起战斗前确认队友位置",
+          "避免在队友无法跟进时单独承伤"
+        ],
+        "abstention_level": "none",
+        "abstain_on": [],
+        "required_user_action": null
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "none",
+        "what_went_well": [
+          "参团率为60%，团队参与较好。"
+        ],
+        "what_to_improve": [
+          "死亡次数较多（10次），可能减少持续贡献时间。",
+          "承伤占比较高且死亡较多，部分承伤可能没有形成有效收益。"
+        ],
+        "next_match_focus": [
+          "下一局优先减少无队友支援时的高风险交战。",
+          "承担伤害前先确认队友是否能够跟进。"
+        ],
+        "evidence": [
+          "deaths",
+          "kill_participation_pct"
+        ],
+        "latency_seconds": 0.0001501000951975584,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_12",
+      "input": {
+        "hero": "吕布",
+        "role": "Fighter",
+        "duration_min": 22,
+        "kills": 6,
+        "deaths": 4,
+        "assists": 8,
+        "gold": 12500,
+        "gold_share_pct": 22.1,
+        "damage_dealt": 72000,
+        "damage_dealt_share_pct": 24.0,
+        "damage_taken": 85000,
+        "damage_taken_share_pct": 28.0,
+        "kill_participation_pct": 58,
+        "match_result": "win",
+        "validation_status": "valid"
+      },
+      "expected": {
+        "expected_strengths": [
+          "输出、承伤、参团和生存较为均衡"
+        ],
+        "expected_weaknesses": [
+          "现有数据中没有明显严重弱点"
+        ],
+        "expected_next_actions": [
+          "继续平衡输出和承伤",
+          "避免为了增加伤害而过度深入"
+        ],
+        "abstention_level": "none",
+        "abstain_on": [],
+        "required_user_action": null
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "none",
+        "what_went_well": [
+          "承伤占比为28.0%，且死亡次数未明显失控。"
+        ],
+        "what_to_improve": [
+          "现有数据中没有达到规则阈值的明显问题。"
+        ],
+        "next_match_focus": [
+          "下一局继续保持当前表现，并优先保证稳定参与和生存。"
+        ],
+        "evidence": [
+          "damage_taken_share_pct",
+          "deaths"
+        ],
+        "latency_seconds": 0.00014230003580451012,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_13",
+      "input": {
+        "hero": "鲁班七号",
+        "role": "Marksman",
+        "duration_min": 24,
+        "kills": 5,
+        "deaths": 5,
+        "assists": 9,
+        "gold": 11500,
+        "gold_share_pct": 20.0,
+        "damage_dealt": 94000,
+        "damage_dealt_share_pct": 33.0,
+        "damage_taken": 42000,
+        "damage_taken_share_pct": 15.0,
+        "kill_participation_pct": 47,
+        "match_result": "loss",
+        "validation_status": "valid"
+      },
+      "expected": {
+        "expected_strengths": [
+          "输出占比明显高于经济占比",
+          "输出效率较好"
+        ],
+        "expected_weaknesses": [
+          "死亡和参团表现仍有改善空间"
+        ],
+        "expected_next_actions": [
+          "提高稳定发育和参团能力",
+          "保持当前输出效率"
+        ],
+        "abstention_level": "none",
+        "abstain_on": [],
+        "required_user_action": null
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "none",
+        "what_went_well": [
+          "输出占比为33.0%，完成了较好的伤害贡献。",
+          "输出占比明显高于经济占比，输出效率较好。"
+        ],
+        "what_to_improve": [
+          "现有数据中没有达到规则阈值的明显问题。"
+        ],
+        "next_match_focus": [
+          "下一局继续保持当前表现，并优先保证稳定参与和生存。"
+        ],
+        "evidence": [
+          "damage_dealt_share_pct",
+          "gold_share_pct"
+        ],
+        "latency_seconds": 0.00016409996896982193,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_14",
+      "input": {
+        "hero": "王昭君",
+        "role": "Mage",
+        "duration_min": 21,
+        "kills": 2,
+        "deaths": 4,
+        "assists": 16,
+        "gold": 11200,
+        "gold_share_pct": 20.2,
+        "damage_dealt": 69000,
+        "damage_dealt_share_pct": 25.0,
+        "damage_taken": 33000,
+        "damage_taken_share_pct": 12.0,
+        "kill_participation_pct": 72,
+        "match_result": "win",
+        "validation_status": "valid"
+      },
+      "expected": {
+        "expected_strengths": [
+          "参团率和输出占比较好",
+          "低击杀不代表贡献较低"
+        ],
+        "expected_weaknesses": [
+          "缺少控制时长和技能命中数据"
+        ],
+        "expected_next_actions": [
+          "继续利用技能协助队友",
+          "保持安全施法距离"
+        ],
+        "abstention_level": "none",
+        "abstain_on": [],
+        "required_user_action": null
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "none",
+        "what_went_well": [
+          "参团率为72%，团队参与较好。",
+          "输出占比为25.0%，完成了较好的伤害贡献。"
+        ],
+        "what_to_improve": [
+          "现有数据中没有达到规则阈值的明显问题。"
+        ],
+        "next_match_focus": [
+          "下一局继续保持当前表现，并优先保证稳定参与和生存。"
+        ],
+        "evidence": [
+          "kill_participation_pct",
+          "damage_dealt_share_pct"
+        ],
+        "latency_seconds": 0.00014599994756281376,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_15",
+      "input": {
+        "hero": "李白",
+        "role": "Assassin",
+        "duration_min": 20,
+        "kills": 3,
+        "deaths": 3,
+        "assists": 15,
+        "gold": 10700,
+        "gold_share_pct": 19.4,
+        "damage_dealt": 44000,
+        "damage_dealt_share_pct": 17.0,
+        "damage_taken": 31000,
+        "damage_taken_share_pct": 12.0,
+        "kill_participation_pct": 60,
+        "match_result": "win",
+        "validation_status": "valid"
+      },
+      "expected": {
+        "expected_strengths": [
+          "参团率较高",
+          "死亡较少"
+        ],
+        "expected_weaknesses": [
+          "输出和击杀相对一般，但不能断定目标选择错误"
+        ],
+        "expected_next_actions": [
+          "保持低死亡",
+          "提高对关键目标的有效伤害"
+        ],
+        "abstention_level": "none",
+        "abstain_on": [],
+        "required_user_action": null
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "none",
+        "what_went_well": [
+          "死亡次数较少（3次），生存表现较好。"
+        ],
+        "what_to_improve": [
+          "现有数据中没有达到规则阈值的明显问题。"
+        ],
+        "next_match_focus": [
+          "下一局继续保持当前表现，并优先保证稳定参与和生存。"
+        ],
+        "evidence": [
+          "deaths"
+        ],
+        "latency_seconds": 0.0001251001376658678,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_16",
+      "input": {
+        "hero": "孙悟空",
+        "role": "Assassin",
+        "duration_min": 25,
+        "kills": 7,
+        "deaths": 8,
+        "assists": 3,
+        "gold": 15800,
+        "gold_share_pct": 27.0,
+        "damage_dealt": 52000,
+        "damage_dealt_share_pct": 17.0,
+        "damage_taken": 60000,
+        "damage_taken_share_pct": 20.0,
+        "kill_participation_pct": 36,
+        "match_result": "loss",
+        "validation_status": "valid"
+      },
+      "expected": {
+        "expected_strengths": [
+          "获得了一定数量的击杀",
+          "经济积累较高"
+        ],
+        "expected_weaknesses": [
+          "死亡较多",
+          "输出占比和参团率相对于经济占比较低"
+        ],
+        "expected_next_actions": [
+          "选择成功率更高的进场机会",
+          "完成爆发后及时撤离"
+        ],
+        "abstention_level": "none",
+        "abstain_on": [],
+        "required_user_action": null
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "none",
+        "what_went_well": [
+          "现有数据中没有达到规则阈值的明显优势。"
+        ],
+        "what_to_improve": [
+          "死亡次数较多（8次），可能减少持续贡献时间。",
+          "经济占比较高，但输出占比没有同步提升。"
+        ],
+        "next_match_focus": [
+          "下一局优先减少无队友支援时的高风险交战。",
+          "下一局重点提高经济到有效战斗贡献的转化。"
+        ],
+        "evidence": [
+          "deaths",
+          "gold_share_pct",
+          "damage_dealt_share_pct"
+        ],
+        "latency_seconds": 0.00012179999612271786,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_17",
+      "input": {
+        "hero": "貂蝉",
+        "role": "Mage",
+        "duration_min": 29,
+        "kills": 11,
+        "deaths": 5,
+        "assists": 9,
+        "gold": 17200,
+        "gold_share_pct": 25.2,
+        "damage_dealt": 135000,
+        "damage_dealt_share_pct": 36.0,
+        "damage_taken": 75000,
+        "damage_taken_share_pct": 20.0,
+        "kill_participation_pct": 61,
+        "match_result": "loss",
+        "validation_status": "valid"
+      },
+      "expected": {
+        "expected_strengths": [
+          "输出占比高",
+          "击杀和助攻表现良好"
+        ],
+        "expected_weaknesses": [
+          "无法仅凭比赛失利确定个人弱点"
+        ],
+        "expected_next_actions": [
+          "保持输出效率",
+          "团战取得优势后与队友共同确认地图目标"
+        ],
+        "abstention_level": "none",
+        "abstain_on": [],
+        "required_user_action": null
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "none",
+        "what_went_well": [
+          "输出占比为36.0%，完成了较好的伤害贡献。",
+          "输出占比明显高于经济占比，输出效率较好。"
+        ],
+        "what_to_improve": [
+          "承伤占比为20.0%，对该输出角色偏高。"
+        ],
+        "next_match_focus": [
+          "团战中尽量利用前排保护，减少暴露在主要攻击范围内的时间。"
+        ],
+        "evidence": [
+          "damage_dealt_share_pct",
+          "damage_taken_share_pct",
+          "gold_share_pct"
+        ],
+        "latency_seconds": 0.00012600002810359,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_18",
+      "input": {
+        "hero": "张飞",
+        "role": "Tank",
+        "duration_min": 21,
+        "kills": 0,
+        "deaths": 3,
+        "assists": 18,
+        "gold": 9600,
+        "gold_share_pct": 16.8,
+        "damage_dealt": 16000,
+        "damage_dealt_share_pct": 5.0,
+        "damage_taken": 110000,
+        "damage_taken_share_pct": 38.0,
+        "kill_participation_pct": 72,
+        "match_result": "win",
+        "validation_status": "valid"
+      },
+      "expected": {
+        "expected_strengths": [
+          "承伤占比和参团率高",
+          "死亡较少"
+        ],
+        "expected_weaknesses": [
+          "缺少控制、护盾和保护数据",
+          "低输出不是主要问题"
+        ],
+        "expected_next_actions": [
+          "继续承担前排和保护职责",
+          "不需要追求击杀或输出"
+        ],
+        "abstention_level": "none",
+        "abstain_on": [],
+        "required_user_action": null
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "none",
+        "what_went_well": [
+          "死亡次数较少（3次），生存表现较好。",
+          "参团率为72%，团队参与较好。",
+          "承伤占比为38.0%，且死亡次数未明显失控。"
+        ],
+        "what_to_improve": [
+          "现有数据中没有达到规则阈值的明显问题。"
+        ],
+        "next_match_focus": [
+          "下一局继续保持当前表现，并优先保证稳定参与和生存。"
+        ],
+        "evidence": [
+          "deaths",
+          "kill_participation_pct",
+          "damage_taken_share_pct"
+        ],
+        "latency_seconds": 0.00011159991845488548,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_19",
+      "input": {
+        "hero": "明世隐",
+        "role": "Support",
+        "duration_min": 20,
+        "kills": 1,
+        "deaths": 9,
+        "assists": 13,
+        "gold": 8900,
+        "gold_share_pct": 15.9,
+        "damage_dealt": 10000,
+        "damage_dealt_share_pct": 4.0,
+        "damage_taken": 54000,
+        "damage_taken_share_pct": 23.0,
+        "kill_participation_pct": 58,
+        "match_result": "loss",
+        "validation_status": "valid"
+      },
+      "expected": {
+        "expected_strengths": [
+          "参团率尚可",
+          "获得较多助攻"
+        ],
+        "expected_weaknesses": [
+          "死亡和承伤占比对于辅助偏高",
+          "频繁阵亡影响持续支援"
+        ],
+        "expected_next_actions": [
+          "保持与队友的安全距离",
+          "避免为了支援进入无法撤离的位置"
+        ],
+        "abstention_level": "none",
+        "abstain_on": [],
+        "required_user_action": null
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "none",
+        "what_went_well": [
+          "现有数据中没有达到规则阈值的明显优势。"
+        ],
+        "what_to_improve": [
+          "死亡次数较多（9次），可能减少持续贡献时间。"
+        ],
+        "next_match_focus": [
+          "下一局优先减少无队友支援时的高风险交战。"
+        ],
+        "evidence": [
+          "deaths"
+        ],
+        "latency_seconds": 9.850016795098782e-05,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_20",
+      "input": {
+        "hero": "马可波罗",
+        "role": "Marksman",
+        "duration_min": 22,
+        "kills": 7,
+        "deaths": 3,
+        "assists": 8,
+        "gold": 13400,
+        "gold_share_pct": 24.0,
+        "damage_dealt": null,
+        "damage_dealt_share_pct": null,
+        "damage_taken": 30000,
+        "damage_taken_share_pct": 12.0,
+        "kill_participation_pct": 54,
+        "match_result": "win",
+        "validation_status": "incomplete"
+      },
+      "expected": {
+        "expected_strengths": [
+          "KDA、生存、经济和参团表现可以评价"
+        ],
+        "expected_weaknesses": [
+          "缺少输出数据，不能评价伤害贡献或经济转化效率"
+        ],
+        "expected_next_actions": [
+          "继续控制死亡",
+          "补充输出数据后再判断射手输出职责"
+        ],
+        "abstention_level": "partial",
+        "abstain_on": [
+          "damage contribution",
+          "gold-to-damage efficiency"
+        ],
+        "required_user_action": "Provide damage dealt and damage share for a complete review."
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "partial",
+        "what_went_well": [
+          "死亡次数较少（3次），生存表现较好。"
+        ],
+        "what_to_improve": [
+          "现有数据中没有达到规则阈值的明显问题。",
+          "以下字段缺失，相关方面无法判断：damage_dealt、damage_dealt_share_pct。"
+        ],
+        "next_match_focus": [
+          "下一局继续保持当前表现，并优先保证稳定参与和生存。",
+          "补充缺失字段后可获得更完整的复盘。"
+        ],
+        "evidence": [
+          "deaths"
+        ],
+        "latency_seconds": 0.00010819989256560802,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_21",
+      "input": {
+        "hero": "后羿",
+        "role": "Marksman",
+        "duration_min": 24,
+        "kills": null,
+        "deaths": null,
+        "assists": null,
+        "gold": 14200,
+        "gold_share_pct": 25.0,
+        "damage_dealt": 98000,
+        "damage_dealt_share_pct": 35.0,
+        "damage_taken": 32000,
+        "damage_taken_share_pct": 11.0,
+        "kill_participation_pct": null,
+        "match_result": "win",
+        "validation_status": "incomplete"
+      },
+      "expected": {
+        "expected_strengths": [
+          "经济、输出和承伤情况可以评价"
+        ],
+        "expected_weaknesses": [
+          "缺少KDA，不能评价击杀参与和死亡控制"
+        ],
+        "expected_next_actions": [
+          "保持输出效率",
+          "补充KDA后再评价生存表现"
+        ],
+        "abstention_level": "partial",
+        "abstain_on": [
+          "KDA",
+          "survival by deaths",
+          "kill participation"
+        ],
+        "required_user_action": "Provide K/D/A for a complete review."
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "partial",
+        "what_went_well": [
+          "输出占比为35.0%，完成了较好的伤害贡献。",
+          "输出占比明显高于经济占比，输出效率较好。"
+        ],
+        "what_to_improve": [
+          "现有数据中没有达到规则阈值的明显问题。",
+          "以下字段缺失，相关方面无法判断：assists、deaths、kill_participation_pct、kills。"
+        ],
+        "next_match_focus": [
+          "下一局继续保持当前表现，并优先保证稳定参与和生存。",
+          "补充缺失字段后可获得更完整的复盘。"
+        ],
+        "evidence": [
+          "damage_dealt_share_pct",
+          "gold_share_pct"
+        ],
+        "latency_seconds": 0.00010320008732378483,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_22",
+      "input": {
+        "hero": "李白",
+        "role": "Assassin",
+        "duration_min": 18,
+        "kills": 8,
+        "deaths": 2,
+        "assists": 5,
+        "gold": null,
+        "gold_share_pct": null,
+        "damage_dealt": 52000,
+        "damage_dealt_share_pct": 22.0,
+        "damage_taken": 27000,
+        "damage_taken_share_pct": 13.0,
+        "kill_participation_pct": 62,
+        "match_result": "win",
+        "validation_status": "incomplete"
+      },
+      "expected": {
+        "expected_strengths": [
+          "KDA、死亡控制、参团和输出可以评价"
+        ],
+        "expected_weaknesses": [
+          "缺少经济数据，不能评价发育或经济转化效率"
+        ],
+        "expected_next_actions": [
+          "保持低死亡和有效参团",
+          "补充经济数据后再评价发育效率"
+        ],
+        "abstention_level": "partial",
+        "abstain_on": [
+          "farming efficiency",
+          "gold conversion"
+        ],
+        "required_user_action": "Provide gold and gold share for a complete review."
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "partial",
+        "what_went_well": [
+          "死亡次数较少（2次），生存表现较好。",
+          "输出占比为22.0%，完成了较好的伤害贡献。"
+        ],
+        "what_to_improve": [
+          "现有数据中没有达到规则阈值的明显问题。",
+          "以下字段缺失，相关方面无法判断：gold、gold_share_pct。"
+        ],
+        "next_match_focus": [
+          "下一局继续保持当前表现，并优先保证稳定参与和生存。",
+          "补充缺失字段后可获得更完整的复盘。"
+        ],
+        "evidence": [
+          "deaths",
+          "damage_dealt_share_pct"
+        ],
+        "latency_seconds": 0.00010200007818639278,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_23",
+      "input": {
+        "hero": "吕布",
+        "role": "Fighter",
+        "duration_min": 23,
+        "kills": 6,
+        "deaths": 5,
+        "assists": 7,
+        "gold": 12800,
+        "gold_share_pct": 22.0,
+        "damage_dealt": 79000,
+        "damage_dealt_share_pct": 25.0,
+        "damage_taken": null,
+        "damage_taken_share_pct": null,
+        "kill_participation_pct": 46,
+        "match_result": "loss",
+        "validation_status": "incomplete"
+      },
+      "expected": {
+        "expected_strengths": [
+          "输出、经济、KDA和参团可以评价"
+        ],
+        "expected_weaknesses": [
+          "缺少承伤数据，不能评价前排贡献或输出承伤平衡"
+        ],
+        "expected_next_actions": [
+          "继续维持输出",
+          "补充承伤数据后再评价战士的前排贡献"
+        ],
+        "abstention_level": "partial",
+        "abstain_on": [
+          "damage-taking contribution",
+          "output-tank balance"
+        ],
+        "required_user_action": "Provide damage taken and its share for a complete review."
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "partial",
+        "what_went_well": [
+          "现有数据中没有达到规则阈值的明显优势。"
+        ],
+        "what_to_improve": [
+          "现有数据中没有达到规则阈值的明显问题。",
+          "以下字段缺失，相关方面无法判断：damage_taken、damage_taken_share_pct。"
+        ],
+        "next_match_focus": [
+          "下一局继续保持当前表现，并优先保证稳定参与和生存。",
+          "补充缺失字段后可获得更完整的复盘。"
+        ],
+        "evidence": [],
+        "latency_seconds": 0.00012079998850822449,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_24",
+      "input": {
+        "hero": "安琪拉",
+        "role": "Mage",
+        "duration_min": 22,
+        "kills": 8,
+        "deaths": 3,
+        "assists": 10,
+        "gold": 12300,
+        "gold_share_pct": 23.0,
+        "damage_dealt": 88000,
+        "damage_dealt_share_pct": 33.0,
+        "damage_taken": 32000,
+        "damage_taken_share_pct": 12.0,
+        "kill_participation_pct": 64,
+        "match_result": null,
+        "validation_status": "incomplete"
+      },
+      "expected": {
+        "expected_strengths": [
+          "KDA、输出、经济和生存可以评价"
+        ],
+        "expected_weaknesses": [
+          "缺少比赛结果，不能讨论个人表现与胜负的关系"
+        ],
+        "expected_next_actions": [
+          "继续保持安全输出",
+          "补充比赛结果后再分析胜负关联"
+        ],
+        "abstention_level": "partial",
+        "abstain_on": [
+          "relationship between performance and match result"
+        ],
+        "required_user_action": "Provide the match result for outcome-related analysis."
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "partial",
+        "what_went_well": [
+          "死亡次数较少（3次），生存表现较好。",
+          "输出占比为33.0%，完成了较好的伤害贡献。",
+          "输出占比明显高于经济占比，输出效率较好。"
+        ],
+        "what_to_improve": [
+          "现有数据中没有达到规则阈值的明显问题。",
+          "以下字段缺失，相关方面无法判断：match_result。"
+        ],
+        "next_match_focus": [
+          "下一局继续保持当前表现，并优先保证稳定参与和生存。",
+          "补充缺失字段后可获得更完整的复盘。"
+        ],
+        "evidence": [
+          "deaths",
+          "damage_dealt_share_pct",
+          "gold_share_pct"
+        ],
+        "latency_seconds": 0.00011030002497136593,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_25",
+      "input": {
+        "hero": null,
+        "role": "Marksman",
+        "duration_min": 21,
+        "kills": 6,
+        "deaths": 4,
+        "assists": 8,
+        "gold": 11800,
+        "gold_share_pct": 22.0,
+        "damage_dealt": 72000,
+        "damage_dealt_share_pct": 29.0,
+        "damage_taken": 36000,
+        "damage_taken_share_pct": 14.0,
+        "kill_participation_pct": 52,
+        "match_result": "win",
+        "validation_status": "incomplete"
+      },
+      "expected": {
+        "expected_strengths": [
+          "可以进行射手角色层面的KDA、经济、输出和生存分析"
+        ],
+        "expected_weaknesses": [
+          "无法提供英雄技能、机制或英雄专属建议"
+        ],
+        "expected_next_actions": [
+          "继续保证发育和安全输出",
+          "补充英雄名称以获得英雄级建议"
+        ],
+        "abstention_level": "partial",
+        "abstain_on": [
+          "hero-specific analysis"
+        ],
+        "required_user_action": "Provide the hero name for hero-specific advice."
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "partial",
+        "what_went_well": [
+          "输出占比为29.0%，完成了较好的伤害贡献。",
+          "输出占比明显高于经济占比，输出效率较好。"
+        ],
+        "what_to_improve": [
+          "现有数据中没有达到规则阈值的明显问题。",
+          "以下字段缺失，相关方面无法判断：hero。"
+        ],
+        "next_match_focus": [
+          "下一局继续保持当前表现，并优先保证稳定参与和生存。",
+          "补充缺失字段后可获得更完整的复盘。"
+        ],
+        "evidence": [
+          "damage_dealt_share_pct",
+          "gold_share_pct"
+        ],
+        "latency_seconds": 9.569991379976273e-05,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_26",
+      "input": {
+        "hero": "公孙离",
+        "role": "Marksman",
+        "duration_min": 19,
+        "kills": 6,
+        "deaths": 0,
+        "assists": 9,
+        "gold": 12000,
+        "gold_share_pct": 24.0,
+        "damage_dealt": 71000,
+        "damage_dealt_share_pct": 31.0,
+        "damage_taken": 18000,
+        "damage_taken_share_pct": 8.0,
+        "kill_participation_pct": 63,
+        "match_result": "win",
+        "validation_status": "valid"
+      },
+      "expected": {
+        "expected_strengths": [
+          "没有死亡",
+          "输出占比和参团率良好"
+        ],
+        "expected_weaknesses": [
+          "不能仅凭零死亡判断玩家是否过于保守"
+        ],
+        "expected_next_actions": [
+          "继续保持安全输出",
+          "不要为了增加击杀承担不必要风险"
+        ],
+        "abstention_level": "none",
+        "abstain_on": [],
+        "required_user_action": null
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "none",
+        "what_went_well": [
+          "死亡次数较少（0次），生存表现较好。",
+          "输出占比为31.0%，完成了较好的伤害贡献。",
+          "输出占比明显高于经济占比，输出效率较好。"
+        ],
+        "what_to_improve": [
+          "现有数据中没有达到规则阈值的明显问题。"
+        ],
+        "next_match_focus": [
+          "下一局继续保持当前表现，并优先保证稳定参与和生存。"
+        ],
+        "evidence": [
+          "deaths",
+          "damage_dealt_share_pct",
+          "gold_share_pct"
+        ],
+        "latency_seconds": 0.00010460009798407555,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_27",
+      "input": {
+        "hero": "后羿",
+        "role": "Marksman",
+        "duration_min": 25,
+        "kills": 0,
+        "deaths": 0,
+        "assists": 0,
+        "gold": 16000,
+        "gold_share_pct": 30.0,
+        "damage_dealt": 9000,
+        "damage_dealt_share_pct": 4.0,
+        "damage_taken": 8000,
+        "damage_taken_share_pct": 3.0,
+        "kill_participation_pct": 0,
+        "match_result": "loss",
+        "validation_status": "valid"
+      },
+      "expected": {
+        "expected_strengths": [
+          "经济较高且没有死亡"
+        ],
+        "expected_weaknesses": [
+          "输出占比和参团率极低",
+          "经济没有转化为团队战斗贡献",
+          "不能直接声称玩家挂机"
+        ],
+        "expected_next_actions": [
+          "在保证生存的同时及时参与有队友配合的团战"
+        ],
+        "abstention_level": "none",
+        "abstain_on": [],
+        "required_user_action": null
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "none",
+        "what_went_well": [
+          "死亡次数较少（0次），生存表现较好。"
+        ],
+        "what_to_improve": [
+          "参团率只有0%，团队参与偏低。",
+          "输出占比只有4.0%，与角色的伤害职责不匹配。",
+          "经济占比较高，但输出占比没有同步提升。"
+        ],
+        "next_match_focus": [
+          "下一局在保证发育的同时，更及时地参与有队友配合的团战。",
+          "下一局在安全位置寻找更多有效输出机会。",
+          "下一局重点提高经济到有效战斗贡献的转化。"
+        ],
+        "evidence": [
+          "deaths",
+          "kill_participation_pct",
+          "damage_dealt_share_pct",
+          "gold_share_pct"
+        ],
+        "latency_seconds": 0.0001289001666009426,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_28",
+      "input": {
+        "hero": "鲁班七号",
+        "role": "Marksman",
+        "duration_min": 24,
+        "kills": 6,
+        "deaths": 7,
+        "assists": 9,
+        "gold": 12600,
+        "gold_share_pct": 23.0,
+        "damage_dealt": 78000,
+        "damage_dealt_share_pct": 31.0,
+        "damage_taken": 82000,
+        "damage_taken_share_pct": 29.0,
+        "kill_participation_pct": 54,
+        "match_result": "loss",
+        "validation_status": "valid"
+      },
+      "expected": {
+        "expected_strengths": [
+          "输出占比较高",
+          "有一定团队贡献"
+        ],
+        "expected_weaknesses": [
+          "死亡和承伤占比对于射手明显偏高"
+        ],
+        "expected_next_actions": [
+          "保持在前排后方输出",
+          "减少处于敌方主要攻击范围内的时间"
+        ],
+        "abstention_level": "none",
+        "abstain_on": [],
+        "required_user_action": null
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "none",
+        "what_went_well": [
+          "输出占比为31.0%，完成了较好的伤害贡献。",
+          "输出占比明显高于经济占比，输出效率较好。"
+        ],
+        "what_to_improve": [
+          "死亡次数较多（7次），可能减少持续贡献时间。",
+          "承伤占比为29.0%，对该输出角色偏高。"
+        ],
+        "next_match_focus": [
+          "下一局优先减少无队友支援时的高风险交战。",
+          "团战中尽量利用前排保护，减少暴露在主要攻击范围内的时间。"
+        ],
+        "evidence": [
+          "deaths",
+          "damage_dealt_share_pct",
+          "damage_taken_share_pct",
+          "gold_share_pct"
+        ],
+        "latency_seconds": 0.00014469982124865055,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_29",
+      "input": {
+        "hero": "廉颇",
+        "role": "Tank",
+        "duration_min": 20,
+        "kills": 7,
+        "deaths": 3,
+        "assists": 5,
+        "gold": 11900,
+        "gold_share_pct": 22.0,
+        "damage_dealt": 56000,
+        "damage_dealt_share_pct": 24.0,
+        "damage_taken": 37000,
+        "damage_taken_share_pct": 15.0,
+        "kill_participation_pct": 48,
+        "match_result": "win",
+        "validation_status": "valid"
+      },
+      "expected": {
+        "expected_strengths": [
+          "击杀、输出和生存表现较好"
+        ],
+        "expected_weaknesses": [
+          "承伤占比较低，但不能单凭这一点认定没有履行坦克职责"
+        ],
+        "expected_next_actions": [
+          "保持生存和输出",
+          "根据阵容需要承担合理前排压力"
+        ],
+        "abstention_level": "none",
+        "abstain_on": [],
+        "required_user_action": null
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "none",
+        "what_went_well": [
+          "死亡次数较少（3次），生存表现较好。"
+        ],
+        "what_to_improve": [
+          "现有数据中没有达到规则阈值的明显问题。"
+        ],
+        "next_match_focus": [
+          "下一局继续保持当前表现，并优先保证稳定参与和生存。"
+        ],
+        "evidence": [
+          "deaths"
+        ],
+        "latency_seconds": 0.00012440001592040062,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_30",
+      "input": {
+        "hero": "伽罗",
+        "role": "Marksman",
+        "duration_min": 15,
+        "kills": 7,
+        "deaths": 1,
+        "assists": 5,
+        "gold": 9700,
+        "gold_share_pct": 25.0,
+        "damage_dealt": 58000,
+        "damage_dealt_share_pct": 36.0,
+        "damage_taken": 14000,
+        "damage_taken_share_pct": 8.0,
+        "kill_participation_pct": 60,
+        "match_result": "win",
+        "validation_status": "valid"
+      },
+      "expected": {
+        "expected_strengths": [
+          "虽然原始输出不如长局高，但输出占比很高",
+          "KDA和生存表现良好"
+        ],
+        "expected_weaknesses": [
+          "不能因为原始总输出低于长局案例而判定输出不足"
+        ],
+        "expected_next_actions": [
+          "继续保持高输出占比和低死亡",
+          "维持稳定发育节奏"
+        ],
+        "abstention_level": "none",
+        "abstain_on": [],
+        "required_user_action": null
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "none",
+        "what_went_well": [
+          "死亡次数较少（1次），生存表现较好。",
+          "输出占比为36.0%，完成了较好的伤害贡献。",
+          "输出占比明显高于经济占比，输出效率较好。"
+        ],
+        "what_to_improve": [
+          "现有数据中没有达到规则阈值的明显问题。"
+        ],
+        "next_match_focus": [
+          "下一局继续保持当前表现，并优先保证稳定参与和生存。"
+        ],
+        "evidence": [
+          "deaths",
+          "damage_dealt_share_pct",
+          "gold_share_pct"
+        ],
+        "latency_seconds": 0.00011790008284151554,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_31",
+      "input": {
+        "hero": "后羿",
+        "role": "Marksman",
+        "duration_min": null,
+        "kills": null,
+        "deaths": null,
+        "assists": null,
+        "gold": null,
+        "gold_share_pct": null,
+        "damage_dealt": null,
+        "damage_dealt_share_pct": null,
+        "damage_taken": null,
+        "damage_taken_share_pct": null,
+        "kill_participation_pct": null,
+        "match_result": null,
+        "validation_status": "insufficient_data"
+      },
+      "expected": {
+        "expected_strengths": [],
+        "expected_weaknesses": [
+          "没有任何可用于评价个人表现的战绩数据"
+        ],
+        "expected_next_actions": [],
+        "abstention_level": "full",
+        "abstain_on": [
+          "complete post-match review"
+        ],
+        "required_user_action": "Enter the complete match statistics manually before analysis."
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "full",
+        "what_went_well": [
+          "信息不足，无法可靠判断本局表现。"
+        ],
+        "what_to_improve": [
+          "当前不能评价比赛表现：Input validation status is insufficient_data.；No usable performance statistics were provided."
+        ],
+        "next_match_focus": [
+          "请修正冲突或补充完整数据后重新分析。"
+        ],
+        "evidence": [],
+        "latency_seconds": 1.0499963536858559e-05,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_32",
+      "input": {
+        "hero": "后羿",
+        "role": "Goalkeeper",
+        "duration_min": 20,
+        "kills": 5,
+        "deaths": 2,
+        "assists": 6,
+        "gold": 11000,
+        "gold_share_pct": 22.0,
+        "damage_dealt": 60000,
+        "damage_dealt_share_pct": 28.0,
+        "damage_taken": 20000,
+        "damage_taken_share_pct": 10.0,
+        "kill_participation_pct": 50,
+        "match_result": "win",
+        "validation_status": "valid"
+      },
+      "expected": {
+        "expected_strengths": [],
+        "expected_weaknesses": [
+          "角色值不在系统支持范围内，无法按角色职责可靠分析"
+        ],
+        "expected_next_actions": [],
+        "abstention_level": "full",
+        "abstain_on": [
+          "complete post-match review"
+        ],
+        "required_user_action": "Choose one supported role: Marksman, Mage, Assassin, Fighter, Tank, or Support."
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "full",
+        "what_went_well": [
+          "信息不足，无法可靠判断本局表现。"
+        ],
+        "what_to_improve": [
+          "当前不能评价比赛表现：Unsupported role: Goalkeeper."
+        ],
+        "next_match_focus": [
+          "请修正冲突或补充完整数据后重新分析。"
+        ],
+        "evidence": [],
+        "latency_seconds": 7.699942216277122e-06,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_33",
+      "input": {
+        "hero": "安琪拉",
+        "role": "Mage",
+        "duration_min": 22,
+        "kills": 6,
+        "deaths": 3,
+        "assists": 9,
+        "gold": 12100,
+        "gold_share_pct": 22.0,
+        "damage_dealt": 82000,
+        "damage_dealt_share_pct": 30.0,
+        "damage_taken": 29000,
+        "damage_taken_share_pct": 11.0,
+        "kill_participation_pct": 58,
+        "match_result": "draw",
+        "validation_status": "valid"
+      },
+      "expected": {
+        "expected_strengths": [],
+        "expected_weaknesses": [
+          "比赛结果不是系统支持的win或loss，不能可靠完成复盘"
+        ],
+        "expected_next_actions": [],
+        "abstention_level": "full",
+        "abstain_on": [
+          "complete post-match review"
+        ],
+        "required_user_action": "Set match_result to win or loss before analysis."
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "full",
+        "what_went_well": [
+          "信息不足，无法可靠判断本局表现。"
+        ],
+        "what_to_improve": [
+          "当前不能评价比赛表现：Unsupported match result: draw."
+        ],
+        "next_match_focus": [
+          "请修正冲突或补充完整数据后重新分析。"
+        ],
+        "evidence": [],
+        "latency_seconds": 4.600035026669502e-06,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_34",
+      "input": {
+        "hero": "蔡文姬",
+        "role": "Support",
+        "duration_min": 20,
+        "kills": -1,
+        "deaths": 3,
+        "assists": 18,
+        "gold": 8500,
+        "gold_share_pct": 15.0,
+        "damage_dealt": 12000,
+        "damage_dealt_share_pct": 105.0,
+        "damage_taken": 35000,
+        "damage_taken_share_pct": 14.0,
+        "kill_participation_pct": 70,
+        "match_result": "win",
+        "validation_status": "invalid_values"
+      },
+      "expected": {
+        "expected_strengths": [],
+        "expected_weaknesses": [
+          "击杀数为负数且输出占比超过100%，输入无效"
+        ],
+        "expected_next_actions": [],
+        "abstention_level": "full",
+        "abstain_on": [
+          "complete post-match review"
+        ],
+        "required_user_action": "Correct the negative kill count and invalid damage share before analysis."
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "full",
+        "what_went_well": [
+          "信息不足，无法可靠判断本局表现。"
+        ],
+        "what_to_improve": [
+          "当前不能评价比赛表现：Input validation status is invalid_values.；kills cannot be negative.；damage_dealt_share_pct must be between 0 and 100."
+        ],
+        "next_match_focus": [
+          "请修正冲突或补充完整数据后重新分析。"
+        ],
+        "evidence": [],
+        "latency_seconds": 6.8999361246824265e-06,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_35",
+      "input": {
+        "hero": "妲己",
+        "role": "Mage",
+        "duration_min": 36,
+        "kills": 5,
+        "deaths": 6,
+        "assists": 9,
+        "gold": 19000,
+        "gold_share_pct": 20.0,
+        "damage_dealt": 120000,
+        "damage_dealt_share_pct": 18.0,
+        "damage_taken": 58000,
+        "damage_taken_share_pct": 11.0,
+        "kill_participation_pct": 41,
+        "match_result": "loss",
+        "validation_status": "valid"
+      },
+      "expected": {
+        "expected_strengths": [
+          "原始输出数值较高"
+        ],
+        "expected_weaknesses": [
+          "长局中输出占比仅为18%，不能因原始值高而过度表扬",
+          "参团率一般"
+        ],
+        "expected_next_actions": [
+          "提高有效输出占比和团战参与",
+          "不要只依据总输出判断表现"
+        ],
+        "abstention_level": "none",
+        "abstain_on": [],
+        "required_user_action": null
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "none",
+        "what_went_well": [
+          "现有数据中没有达到规则阈值的明显优势。"
+        ],
+        "what_to_improve": [
+          "现有数据中没有达到规则阈值的明显问题。"
+        ],
+        "next_match_focus": [
+          "下一局继续保持当前表现，并优先保证稳定参与和生存。"
+        ],
+        "evidence": [],
+        "latency_seconds": 0.000125400023534894,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_36",
+      "input": {
+        "hero": "王昭君",
+        "role": "Mage",
+        "duration_min": 18,
+        "kills": 4,
+        "deaths": 2,
+        "assists": 12,
+        "gold": 9300,
+        "gold_share_pct": 18.0,
+        "damage_dealt": 61000,
+        "damage_dealt_share_pct": 29.0,
+        "damage_taken": 21000,
+        "damage_taken_share_pct": 9.0,
+        "kill_participation_pct": 67,
+        "match_result": "win",
+        "validation_status": "valid"
+      },
+      "expected": {
+        "expected_strengths": [
+          "输出占比明显高于经济占比",
+          "参团率高且死亡少"
+        ],
+        "expected_weaknesses": [
+          "缺少控制效果数据，不能评价全部法师贡献"
+        ],
+        "expected_next_actions": [
+          "继续保持输出效率和安全施法距离"
+        ],
+        "abstention_level": "none",
+        "abstain_on": [],
+        "required_user_action": null
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "none",
+        "what_went_well": [
+          "死亡次数较少（2次），生存表现较好。",
+          "参团率为67%，团队参与较好。",
+          "输出占比为29.0%，完成了较好的伤害贡献。",
+          "输出占比明显高于经济占比，输出效率较好。"
+        ],
+        "what_to_improve": [
+          "现有数据中没有达到规则阈值的明显问题。"
+        ],
+        "next_match_focus": [
+          "下一局继续保持当前表现，并优先保证稳定参与和生存。"
+        ],
+        "evidence": [
+          "deaths",
+          "kill_participation_pct",
+          "damage_dealt_share_pct",
+          "gold_share_pct"
+        ],
+        "latency_seconds": 0.00012049986980855465,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_37",
+      "input": {
+        "hero": "花木兰",
+        "role": "Fighter",
+        "duration_min": 24,
+        "kills": 3,
+        "deaths": 6,
+        "assists": 4,
+        "gold": 15100,
+        "gold_share_pct": 28.0,
+        "damage_dealt": 48000,
+        "damage_dealt_share_pct": 16.0,
+        "damage_taken": 57000,
+        "damage_taken_share_pct": 18.0,
+        "kill_participation_pct": 29,
+        "match_result": "loss",
+        "validation_status": "valid"
+      },
+      "expected": {
+        "expected_strengths": [
+          "经济积累较高"
+        ],
+        "expected_weaknesses": [
+          "输出、承伤和参团占比均未与高经济匹配",
+          "死亡次数偏高"
+        ],
+        "expected_next_actions": [
+          "将经济优势转化为更有效的团战贡献",
+          "减少缺少队友配合的交战"
+        ],
+        "abstention_level": "none",
+        "abstain_on": [],
+        "required_user_action": null
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "none",
+        "what_went_well": [
+          "现有数据中没有达到规则阈值的明显优势。"
+        ],
+        "what_to_improve": [
+          "参团率只有29%，团队参与偏低。",
+          "经济占比较高，但输出占比没有同步提升。"
+        ],
+        "next_match_focus": [
+          "下一局在保证发育的同时，更及时地参与有队友配合的团战。",
+          "下一局重点提高经济到有效战斗贡献的转化。"
+        ],
+        "evidence": [
+          "kill_participation_pct",
+          "gold_share_pct",
+          "damage_dealt_share_pct"
+        ],
+        "latency_seconds": 0.00010920013301074505,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_38",
+      "input": {
+        "hero": "兰陵王",
+        "role": "Assassin",
+        "duration_min": 23,
+        "kills": 14,
+        "deaths": 4,
+        "assists": 1,
+        "gold": 14600,
+        "gold_share_pct": 24.0,
+        "damage_dealt": 66000,
+        "damage_dealt_share_pct": 21.0,
+        "damage_taken": 35000,
+        "damage_taken_share_pct": 12.0,
+        "kill_participation_pct": 38,
+        "match_result": "win",
+        "validation_status": "valid"
+      },
+      "expected": {
+        "expected_strengths": [
+          "击杀多且死亡控制合理"
+        ],
+        "expected_weaknesses": [
+          "尽管击杀数高，参团率只有38%，不能仅凭击杀数判断整体参与优秀"
+        ],
+        "expected_next_actions": [
+          "保持击杀效率",
+          "提高与团队同步参与关键战斗的比例"
+        ],
+        "abstention_level": "none",
+        "abstain_on": [],
+        "required_user_action": null
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "none",
+        "what_went_well": [
+          "现有数据中没有达到规则阈值的明显优势。"
+        ],
+        "what_to_improve": [
+          "现有数据中没有达到规则阈值的明显问题。"
+        ],
+        "next_match_focus": [
+          "下一局继续保持当前表现，并优先保证稳定参与和生存。"
+        ],
+        "evidence": [],
+        "latency_seconds": 0.00015119998715817928,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_39",
+      "input": {
+        "hero": "白起",
+        "role": "Tank",
+        "duration_min": 22,
+        "kills": 2,
+        "deaths": 5,
+        "assists": 20,
+        "gold": 10300,
+        "gold_share_pct": 17.0,
+        "damage_dealt": 30000,
+        "damage_dealt_share_pct": 10.0,
+        "damage_taken": 89000,
+        "damage_taken_share_pct": 30.0,
+        "kill_participation_pct": 79,
+        "match_result": "win",
+        "validation_status": "valid"
+      },
+      "expected": {
+        "expected_strengths": [
+          "参团率非常高",
+          "承伤占比较好",
+          "助攻多"
+        ],
+        "expected_weaknesses": [
+          "死亡次数仍可进一步控制",
+          "无法仅凭数据评价开团时机"
+        ],
+        "expected_next_actions": [
+          "继续参与团队战斗",
+          "在维持承伤贡献时减少可避免的死亡"
+        ],
+        "abstention_level": "none",
+        "abstain_on": [],
+        "required_user_action": null
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "none",
+        "what_went_well": [
+          "参团率为79%，团队参与较好。",
+          "承伤占比为30.0%，且死亡次数未明显失控。"
+        ],
+        "what_to_improve": [
+          "现有数据中没有达到规则阈值的明显问题。"
+        ],
+        "next_match_focus": [
+          "下一局继续保持当前表现，并优先保证稳定参与和生存。"
+        ],
+        "evidence": [
+          "kill_participation_pct",
+          "damage_taken_share_pct",
+          "deaths"
+        ],
+        "latency_seconds": 0.0004827999509871006,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    },
+    {
+      "case_id": "case_40",
+      "input": {
+        "hero": "蔡文姬",
+        "role": "Support",
+        "duration_min": 27,
+        "kills": 2,
+        "deaths": 2,
+        "assists": 23,
+        "gold": 10500,
+        "gold_share_pct": 15.0,
+        "damage_dealt": 16000,
+        "damage_dealt_share_pct": 4.0,
+        "damage_taken": 42000,
+        "damage_taken_share_pct": 13.0,
+        "kill_participation_pct": 82,
+        "match_result": "loss",
+        "validation_status": "valid"
+      },
+      "expected": {
+        "expected_strengths": [
+          "参团率非常高",
+          "死亡很少",
+          "低输出符合辅助职责"
+        ],
+        "expected_weaknesses": [
+          "缺少治疗量和保护数据，不能评价全部辅助表现",
+          "不能将失利直接归因于该玩家"
+        ],
+        "expected_next_actions": [
+          "继续保持高参团和低死亡",
+          "团战中优先保护团队主要输出点"
+        ],
+        "abstention_level": "none",
+        "abstain_on": [],
+        "required_user_action": null
+      },
+      "output": {
+        "system": "rule_baseline",
+        "abstention_level": "none",
+        "what_went_well": [
+          "死亡次数较少（2次），生存表现较好。",
+          "参团率为82%，团队参与较好。",
+          "获得23次助攻，支援参与较好。"
+        ],
+        "what_to_improve": [
+          "现有数据中没有达到规则阈值的明显问题。"
+        ],
+        "next_match_focus": [
+          "下一局继续保持当前表现，并优先保证稳定参与和生存。"
+        ],
+        "evidence": [
+          "deaths",
+          "kill_participation_pct",
+          "assists"
+        ],
+        "latency_seconds": 0.00020830007269978523,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cost_usd": 0.0
+      },
+      "automatic_checks": {
+        "structure_valid": true,
+        "structure_errors": [],
+        "abstention_correct": true
+      }
+    }
+  ]
+}
